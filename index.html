@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ryan Wien | Software Engineer, Fintech Systems</title>
+<meta name="description" content="Software engineer building fintech systems that have to be right: a double-entry ledger, real-time fraud scoring, credit underwriting, a matching engine in Python and C++, and AML monitoring. 413 passing tests, live demos, every number produced by the code.">
+<meta name="author" content="Ryan Wien">
+<link rel="canonical" href="https://ryanwien.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ryan Wien | Software Engineer, Fintech Systems">
+<meta property="og:description" content="Five fintech systems with live demos: ledger, fraud, credit, matching engine (Python and C++), AML. 413 passing tests.">
+<meta property="og:url" content="https://ryanwien.github.io/">
+<meta property="og:image" content="https://ryanwien.github.io/assets/img/fintech-dashboard.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0c0d0c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23c6f36b'/><path d='M8 21l5-8 4 5 7-10' stroke='%230c0d0c' stroke-width='3.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+</head>
+<body>
+<a class="skip" href="#work">Skip to the work</a>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="#top" aria-label="Ryan Wien, home">
+      <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M8 21l5-8 4 5 7-10" stroke="currentColor" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span>Ryan Wien</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#proof">Proof</a></li>
+        <li><a class="btn btn--sm" href="https://www.linkedin.com/in/ryan-wien" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <div class="hero__copy">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Open to fintech roles</p>
+      <h1>Software that handles money has to be <em>right.</em></h1>
+      <p class="lede">
+        I'm Ryan Wien, a software engineer who builds the systems fintech companies run on:
+        ledgers, fraud scoring, lending, trading and compliance. Each one is tested against the
+        ways it can break, measured, and open for you to try.
+      </p>
+      <div class="cta">
+        <a class="btn btn--go" href="https://ryanwien.github.io/FintechPortfolio/">Open the live dashboard</a>
+        <a class="btn" href="assets/media/RyanWien-Fintech-Portfolio.pdf" download>One-page PDF</a>
+        <a class="btn" href="https://github.com/ryanwien" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <dl class="stats">
+        <div><dt>Passing tests</dt><dd>413</dd></div>
+        <div><dt>Systems built</dt><dd>5</dd></div>
+        <div><dt>Orders per second, C++</dt><dd>4.3M</dd></div>
+      </dl>
+    </div>
+    <figure class="hero__shot">
+      <a href="https://ryanwien.github.io/FintechPortfolio/" aria-label="Open the fintech dashboard">
+        <img src="assets/img/fintech-dashboard.png" width="800" height="506" alt="The fintech portfolio dashboard: 413 passing tests across five systems, with per-system metrics and charts">
+      </a>
+    </figure>
+  </section>
+
+  <section class="section wrap" id="work" aria-labelledby="work-h">
+    <header class="section__head">
+      <p class="eyebrow">Featured</p>
+      <h2 id="work-h">Five systems, one standard</h2>
+      <p class="sub">Integer money, point-in-time data, deterministic runs, and every number on the page written by the code it describes.</p>
+    </header>
+
+    <div class="systems">
+      <article class="sys">
+        <h3>Ledger and payments API</h3>
+        <p>Double-entry journal, idempotent transfers, holds and reconciliation. Retries replay instead of double-charging, and money is conserved under concurrent load.</p>
+        <p class="sys__m"><b>113</b> tests · <b>14.8 ms</b> p99 · <b>0</b> cents of drift</p>
+      </article>
+      <article class="sys">
+        <h3>Real-time fraud scoring</h3>
+        <p>Point-in-time features shared by training and serving, decision bands priced in dollars, and drift monitoring.</p>
+        <p class="sys__m"><b>0.884</b> PR-AUC · <b>$50k</b> a month saved vs rules</p>
+      </article>
+      <article class="sys">
+        <h3>Credit underwriting</h3>
+        <p>A scorecard with out-of-time validation, a fair-lending check, adverse-action reasons and a generated model card.</p>
+        <p class="sys__m"><b>0.700</b> OOT AUC · <b>0.914</b> adverse impact ratio</p>
+      </article>
+      <article class="sys sys--wide">
+        <h3>Matching engine, in Python and C++</h3>
+        <p>One price-time priority order book built twice. The C++20 twin keeps the same rules and ports the same tests, and runs twenty times faster on the same machine.</p>
+        <p class="sys__m"><b>4,321,213</b> orders/s · <b>0.6 µs</b> p99 · <b>150</b> tests</p>
+      </article>
+      <article class="sys">
+        <h3>AML monitoring</h3>
+        <p>Typology rules, graph analytics for mule rings, and a case queue with a tamper-evident audit trail.</p>
+        <p class="sys__m"><b>87.8%</b> typologies caught · <b>33</b> tests</p>
+      </article>
+    </div>
+    <p class="center"><a class="btn btn--go" href="https://ryanwien.github.io/FintechPortfolio/">Try the live demos</a></p>
+  </section>
+
+  <section class="section wrap" id="proof" aria-labelledby="proof-h">
+    <header class="section__head">
+      <p class="eyebrow">Proof</p>
+      <h2 id="proof-h">Watch it run</h2>
+      <p class="sub">A 21 second tour: the dashboard, the engine in both languages, then three demos firing.</p>
+    </header>
+    <div class="proof">
+      <video class="proof__video" controls muted loop playsinline preload="metadata" poster="assets/img/matching-engine.png" aria-label="21 second video tour of the fintech portfolio dashboard and demos">
+        <source src="assets/media/tour.mp4" type="video/mp4">
+        Your browser does not play embedded video. <a href="assets/media/tour.mp4">Download the tour</a>.
+      </video>
+      <figure class="proof__gif">
+        <img src="assets/img/orderbook.gif" width="395" height="425" loading="lazy" alt="Animated demo: market orders sweeping a limit order book, with fills logged by price-time priority">
+        <figcaption>The order book demo, live on the dashboard</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section wrap contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Let's talk</h2>
+    <p class="sub">Hiring for fintech, payments or trading systems? The fastest way to reach me is LinkedIn.</p>
+    <p class="cta cta--center">
+      <a class="btn btn--go" href="https://www.linkedin.com/in/ryan-wien" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      <a class="btn" href="assets/media/RyanWien-Fintech-Portfolio.pdf" download>Download the one-pager</a>
+    </p>
+  </section>
+</main>
+
+<footer class="foot wrap">
+  <span>Ryan Wien · Python · C++ · FastAPI · scikit-learn · SQLite</span>
+  <span><a href="https://github.com/ryanwien" target="_blank" rel="noopener">github.com/ryanwien</a></span>
+</footer>
+</body>
+</html>
