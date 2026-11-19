@@ -1,0 +1,24 @@
+{
+  "note": "note-1",
+  "assumptions": 5,
+  "counts": {
+    "supported": 2,
+    "mixed": 1,
+    "unverified": 2
+  },
+  "shares_percent": {
+    "supported": 40,
+    "mixed": 20,
+    "unverified": 40
+  },
+  "critical_open": 1,
+  "verdict": "blocked",
+  "supported_share_as_built": [
+    100,
+    50,
+    34,
+    50,
+    40
+  ],
+  "tests": 29
+}

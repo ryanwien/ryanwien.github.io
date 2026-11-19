@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ThesisTrace</title>
+  <meta name="description" content="Research notes whose assumptions carry evidence labels, with a live evidence summary.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231f4d3a'/><path d='M9 22V10h14M9 16h9' stroke='%23fbfaf6' stroke-width='3' fill='none' stroke-linecap='round'/></svg>">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="wordmark" href="./">ThesisTrace</a>
+      <p class="tagline">See what a conclusion rests on before you trust it.</p>
+    </div>
+  </header>
+
+  <div class="wrap layout">
+    <nav class="notes" aria-labelledby="notes-heading">
+      <h2 id="notes-heading" class="eyebrow">Research notes</h2>
+      <ul id="note-list" class="note-list"></ul>
+      <form id="new-note" class="new-note">
+        <label for="new-question">New note</label>
+        <textarea id="new-question" rows="3" maxlength="300" required
+          placeholder="The question, e.g. Can the company keep its dividend?"></textarea>
+        <button type="submit" class="button">Start note</button>
+      </form>
+    </nav>
+
+    <main id="note" class="note" tabindex="-1">
+      <p class="empty-state">Pick a note, or start one with the question you are trying to answer.</p>
+    </main>
+
+    <aside id="summary" class="summary" aria-labelledby="summary-heading" hidden>
+      <h2 id="summary-heading" class="eyebrow">Evidence summary</h2>
+      <p id="verdict" class="verdict" aria-live="polite"></p>
+      <div id="bar" class="bar" role="img"></div>
+      <dl id="legend" class="legend"></dl>
+      <section class="bucket" data-bucket="needs_source">
+        <h3>Needs a source</h3>
+        <ol></ol>
+      </section>
+      <section class="bucket" data-bucket="uncertain">
+        <h3>Uncertain</h3>
+        <ol></ol>
+      </section>
+      <section class="bucket" data-bucket="proven">
+        <h3>Proven</h3>
+        <ol></ol>
+      </section>
+    </aside>
+  </div>
+
+  <footer class="wrap footer">
+    <p>ThesisTrace records reasoning so it can be reviewed. It does not give financial
+      advice or predict markets. The sample note describes a fictional company.</p>
+    <p id="mode" class="mode"></p>
+  </footer>
+
+  <template id="assumption-template">
+    <li class="assumption">
+      <div class="assumption-head">
+        <label class="visually-hidden">Assumption</label>
+        <textarea class="statement" rows="2" maxlength="500"></textarea>
+        <button type="button" class="remove" aria-label="Remove assumption">Remove</button>
+      </div>
+      <fieldset class="labels">
+        <legend class="visually-hidden">Evidence</legend>
+      </fieldset>
+      <div class="fields">
+        <label class="field source-field">
+          <span>Source</span>
+          <input class="source" type="text" maxlength="500"
+            placeholder="Filing, page, dataset or interview">
+        </label>
+        <label class="field">
+          <span>Why this label</span>
+          <textarea class="rationale" rows="2" maxlength="2000"
+            placeholder="What the source says, or what is still missing"></textarea>
+        </label>
+        <label class="critical">
+          <input type="checkbox" class="critical-box">
+          <span>Load-bearing: the conclusion falls if this is wrong</span>
+        </label>
+      </div>
+      <p class="card-error" role="alert"></p>
+    </li>
+  </template>
+
+  <script src="assets/engine.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
